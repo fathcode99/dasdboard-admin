@@ -1,4 +1,5 @@
 import React from 'react'
+import DataTable from '../../component/datatable/DataTable'
 import Navbar from '../../component/navbar/Navbar'
 import Sidebar from '../../component/sidebar/Sidebar'
 
@@ -8,7 +9,7 @@ const List = () => {
       <Sidebar />
       <div className="listContainer flex-[6_6_0%]">
         <Navbar />
-        database
+        <DataTable />
       </div>
     </div>
   )
