@@ -1,5 +1,15 @@
 import React from 'react'
 import DashboardIcon from '@mui/icons-material/Dashboard';
+import PersonIcon from '@mui/icons-material/Person';
+import CategoryIcon from '@mui/icons-material/Category';
+import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
+import LocalShippingIcon from '@mui/icons-material/LocalShipping';
+import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
+import SystemSecurityUpdateGoodIcon from '@mui/icons-material/SystemSecurityUpdateGood';
+import PsychologyIcon from '@mui/icons-material/Psychology';
+import SettingsIcon from '@mui/icons-material/Settings';
+import FaceIcon from '@mui/icons-material/Face';
+import LogoutIcon from '@mui/icons-material/Logout';
 
 const Sidebar = () => {
   return (
@@ -8,41 +18,60 @@ const Sidebar = () => {
             <span className='logo text-xl font-bold text-secondary'>DashboardAdmin</span>
         </div>
         <hr />
-        <div className="center">
+        <div className="center pl-4">
             <ul>
-                <li>
-                    <DashboardIcon />
-                    <span>Dashboard</span>
+                <p className="title">MAIN</p>
+                <li className='li-list'>
+                    <DashboardIcon className="icon" />
+                    <span className='li-label'>Dashboard</span>
                 </li>
-                <li>
-                    <span>Users</span>
+
+                <p className="title">LIST</p>
+                <li className='li-list'>
+                    <PersonIcon className="icon" />
+                    <span className='li-label'>Users</span>
                 </li>
-                <li>
-                    <span>Products</span>
+                <li className='li-list'>
+                    <CategoryIcon className="icon" />
+                    <span className='li-label'>Products</span>
                 </li>
-                <li>
-                    <span>Order</span>
+                <li className='li-list'>
+                    <BookmarkBorderIcon className="icon" />
+                    <span className='li-label'>Order</span>
                 </li>
-                <li>
-                    <span>Delivery</span>
+                <li className='li-list'>
+                    <LocalShippingIcon className="icon" />
+                    <span className='li-label'>Delivery</span>
                 </li>
-                <li>
-                    <span>Notification</span>
+
+                <p className="title">USEFULL</p>
+                <li className='li-list'>
+                    <NotificationsActiveIcon className="icon" />
+                    <span className='li-label'>Notification</span>
                 </li>
-                <li>
-                    <span>System Health</span>
+
+                <p className="title">SERVICES</p>
+                <li className='li-list'>
+                    <SystemSecurityUpdateGoodIcon className="icon" />
+                    <span className='li-label'>System Health</span>
                 </li>
-                <li>
-                    <span>Logs</span>
+                <li className='li-list'>
+                    <PsychologyIcon className="icon" />
+                    <span className='li-label'>Logs</span>
                 </li>
-                <li>
-                    <span>Setting</span>
+                <li className='li-list'>
+                    <SettingsIcon className="icon" />
+                    <span className='li-label'>Setting</span>
                 </li>
-                <li>
-                    <span>Profile</span>
+
+                <p className="title">USER</p>
+                <li className='li-list'>
+                    <FaceIcon className="icon" />
+                    <span className='li-label'>Profile</span>
                 </li>
-                <li>
-                    <span>Logout</span>
+                <li className='li-list'>
+                    <LogoutIcon className="icon" />
+                    <span className='li-label'>Logout</span>
                 </li>
             </ul>
         </div>

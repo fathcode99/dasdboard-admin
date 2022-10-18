@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .li-list {
+        @apply flex items-center my-2 cursor-pointer hover:bg-slate-200
+    }
+
+    .li-label {
+        @apply text-xs font-bold text-slate-600 ml-3
+    }
+
+    .icon {
+        @apply text-base text-fuchsia-700
+    }
+    .title {
+        @apply text-xs font-bold mt-4 mb-1 text-slate-500
+    }
+}
