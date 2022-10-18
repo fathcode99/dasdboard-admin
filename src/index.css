@@ -17,4 +17,15 @@
     .title {
         @apply text-xs font-bold mt-4 mb-1 text-slate-500
     }
+
+    /* NAV */
+    .item {
+        @apply flex items-center mr-5 relative 
+    }
+    .nav-icon {
+        @apply text-xl
+    }
+    .counter {
+        @apply w-4 h-4 bg-red-600 rounded-full text-white flex justify-center items-center text-xs font-bold absolute -mt-3 ml-4  
+    } 
 }
