@@ -1,6 +1,6 @@
 import React from 'react'
-import Navbar from '../../component/navbar/Navbar'
-import Sidebar from '../../component/sidebar/Sidebar'
+import Navbar from '../component/Navbar'
+import Sidebar from '../component/Sidebar'
 
 const Single = () => {
   return (

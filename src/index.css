@@ -52,6 +52,6 @@
     }
 
     .input {
-        @apply w-full p-1 border-b-[1px] border-slate-600
+        @apply w-full p-1 border-b-[1px] border-slate-600 outline-none 
     }
 }

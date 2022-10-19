@@ -1,7 +1,7 @@
 import React from "react";
-import Sidebar from "../../component/sidebar/Sidebar";
-import Navbar from "../../component/navbar/Navbar";
-import TableComp from "../../component/table/Table";
+import Sidebar from "../component/Sidebar";
+import Navbar from "../component/Navbar";
+import TableComp from "../component/Table";
 
 
 const Home = () => {

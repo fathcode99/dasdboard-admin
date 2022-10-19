@@ -15,7 +15,7 @@ const DataTable = () => {
         renderCell: (params) => {
             return (
                 <div className="cellAction flex items-center">
-                    <Link to="/users/test">
+                    <Link to="/users/detail">
                         <div className='viewButton py-1 px-2 bg-sky-300 text-sky-600 mr-2 rounded font-medium'>View</div>
                     </Link>
                     <div

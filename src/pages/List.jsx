@@ -1,7 +1,7 @@
 import React from 'react'
-import DataTable from '../../component/datatable/DataTable'
-import Navbar from '../../component/navbar/Navbar'
-import Sidebar from '../../component/sidebar/Sidebar'
+import DataTable from '../component/datatable/DataTable'
+import Navbar from '../component/Navbar'
+import Sidebar from '../component/Sidebar'
 
 const List = () => {
   return (
