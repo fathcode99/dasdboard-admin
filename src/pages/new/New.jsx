@@ -1,22 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Navbar from '../../component/navbar/Navbar'
 import Sidebar from '../../component/sidebar/Sidebar'
 
-const New = () => {
+const New = ({ inputs, title }) => {
+
+  const [file, setFile] = useState("")
+  console.log(file)
   return (
     <div className='new flex w-full'>
       <Sidebar />
       <div className="newContainer flex-[6_6_0%]">
         <Navbar />
         <div className="top px-4 py-4">
-          <h1 className='title-new px-6 text-2xl font-bold text-purple-700'>Add New User</h1>
+          <h1 className='title-new px-6 text-2xl font-bold text-purple-700'>{title}</h1>
         </div>
         <div className="bottom px-4 m-5 flex">
           <div className="left flex-1 w-full">
             <div className="upImg w-full h-full flex justify-center items-center border">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-28 h-28 text-slate-400">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
-              </svg>
+              <img src={file ? URL.createObjectURL(file) : "https://th.bing.com/th/id/OIP.MkL5wbXZbiY6vpYb_tZSfgHaE8?pid=ImgDet&rs=1"} alt="avatar" />
             </div>
           </div>
 
@@ -31,36 +32,16 @@ const New = () => {
                     </svg>
                   </div>
                 </label>
-                <input type="file" id='fileImg' className='hidden' />
+                <input type="file" id='fileImg' onChange={(e) => setFile(e.target.files[0])} className='hidden' />
               </div>
-              <div className="formInput">
-                <label> Username </label>
-                <input className='input' type="text" placeholder='john_doe' />
-              </div>
-              <div className="formInput">
-                <label> Name and Surename </label>
-                <input className='input' type="text" placeholder='John Doe' />
-              </div>
-              <div className="formInput">
-                <label> Email </label>
-                <input className='input' type="email" placeholder='johndoe@xmail.com' />
-              </div>
-              <div className="formInput">
-                <label> No Telp / WA </label>
-                <input className='input' type="text" placeholder='+1 2345 678' />
-              </div>
-              <div className="formInput">
-                <label> Password </label>
-                <input className='input' type="password" />
-              </div>
-              <div className="formInput">
-                <label> Alamat </label>
-                <input className='input' type="text" placeholder='Desa/Kel-RT/RW-No-Kec-Kab/Kota' />
-              </div>
-              <div className="formInput">
-                <label> Alamat </label>
-                <input className='input' type="text" placeholder='Desa/Kel-RT/RW-No-Kec-Kab/Kota' />
-              </div>
+
+              {inputs.map((input) => (
+                <div className="formInput" key={input.id}>
+                  <label> {input.label} </label>
+                  <input className='input' type={input.type} placeholder={input.placeholder} />
+                </div>
+              ))}
+
               <div className='formInput flex justify-start items-end'>
                 <button className='w-16 h-8 bg-sky-500 rounded text-blue-900 font-medium text-base'>Send</button>
               </div>
