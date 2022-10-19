@@ -27,5 +27,31 @@
     }
     .counter {
         @apply w-4 h-4 bg-red-600 rounded-full text-white flex justify-center items-center text-xs font-bold absolute -mt-3 ml-4  
-    } 
+    }
+
+    /* table status */
+    .active {
+        @apply bg-green-300 text-green-600
+    }
+    .inactive {
+        @apply bg-red-300 text-red-600
+    }
+
+    /* single page */
+    .detail {
+        @apply px-7
+    }
+
+    /* add new user */
+    .form {
+        @apply flex flex-wrap gap-5 justify-between mr-4
+    }
+
+    .formInput {
+        @apply w-[45%]
+    }
+
+    .input {
+        @apply w-full p-1 border-b-[1px] border-slate-600
+    }
 }
